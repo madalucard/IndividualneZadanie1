@@ -16,28 +16,29 @@ namespace Cars_Project
     }
     class Car
     {
-        private int Id { get; }
+        public int Id { get; private set; }
         public string Company { get; set; }
         public string Model { get; set; }        
         public int YearOfRegistration { get; set; }
         public int Kilometers { get; set; }
         public int Price { get; set; }
-        public Fuel _fuel;
+        public Fuel Fuel { get; set; }
         public string City { get; set; }
         public int Doors { get; set; }
         public bool Crashed { get; set; }
+
 
         
         public Car(int id, string company, string model, int year, int kms, int price, Fuel fuel, string city, int doors, bool crashed  )
         {
 
             Id = id;
-            YearOfRegistration = year;
-            Kilometers = kms;
             Company = company;
             Model = model;
-            _fuel = fuel;
+            YearOfRegistration = year;
+            Kilometers = kms;
             Price = price;
+            Fuel = fuel;
             City = city;
             Doors = doors;
             Crashed = crashed;
@@ -47,12 +48,12 @@ namespace Cars_Project
         {
 
             Id = DatabaseManager._lastID;
-            YearOfRegistration = year;
-            Kilometers = kms;
             Company = company;
             Model = model;
-            _fuel = fuel;
+            YearOfRegistration = year;
+            Kilometers = kms;
             Price = price;
+            Fuel = fuel;
             City = city;
             Doors = doors;
             Crashed = crashed;
@@ -69,7 +70,7 @@ namespace Cars_Project
                 $"{YearOfRegistration}\t" +
                 $"{Kilometers}\t" +
                 $"{Price}\t" +
-                $"{Enum.GetName(_fuel.GetType(), _fuel)}\t" +
+                $"{Enum.GetName(Fuel.GetType(), Fuel)}\t" +
                 $"{City}\t" +
                 $"{Doors}\t" +
                 $"{Crashed}");

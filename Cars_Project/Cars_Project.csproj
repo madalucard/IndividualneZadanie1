@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="DatabaseManager.cs" />
-    <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
