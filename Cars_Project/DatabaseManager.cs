@@ -41,6 +41,7 @@ namespace Cars_Project
                 int doors = int.Parse(temp[9]);
                 bool crashed = bool.Parse(temp[10]);
 
+                
                 Car car = new Car(id, company, model, year, kms, price, fuel, city, doors, crashed);
                 _lastID = int.Parse(temp[0]);                               
             }
