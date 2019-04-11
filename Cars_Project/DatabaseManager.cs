@@ -19,7 +19,7 @@ namespace Cars_Project
         public static List<Car> GetCars()
         {
             return _carDetails;
-        }
+        }   
 
         /// <summary>
         /// Load database to memory for next work.
@@ -52,7 +52,7 @@ namespace Cars_Project
                 Car car = new Car(id, company, model, year, kms, price, fuel, city, doors, crashed);
                 // Add car to list
                 _carDetails.Add(car); 
-                // When Foreach ens, set global field _lastId to last ID
+                // When Foreach ends, set global field _lastId to last ID
                 _lastID = int.Parse(temp[0]);                               
             }
         }
